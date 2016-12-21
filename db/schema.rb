@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 20161220213600) do
     t.integer  "card_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["card_id"], name: "index_members_on_card_id"
+    t.index ["deck_id"], name: "index_members_on_deck_id"
   end
 
 end
