@@ -11,6 +11,8 @@
 
 <%= link_to 'Edit this Card', edit_card_path(@card) %>
 <br>
+<%= link_to 'Add this Card to Decks', add_to_decks_path(@card) %>
+<br>
 <%= link_to 'Delete this Card',
     card_path(@card),
     method: :delete,

@@ -16,6 +16,10 @@ class DecksController < ApplicationController
     @deck = Deck.find(params[:id])
   end
 
+  def add_remove_cards
+    @deck = Deck.find(params[:id])
+  end
+
   def update
     @deck = Deck.find(params[:id])
     if @deck.update(deck_params)

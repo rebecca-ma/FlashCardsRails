@@ -7,7 +7,22 @@
   <%= @deck.description %>
 </p>
 
+<p>Cards in this Deck:</p>
+<table>
+  <tr>
+    <td>Front</td>
+    <td>Back</td>
+  </tr>
+  <% @deck.cards.each do |card| %>
+    <tr>
+      <td><%= card.front %></td>
+      <td><%= card.back %></td>
+    </tr>
+  <% end %>
+</table>
+
 <%= link_to 'Edit Description', edit_deck_path(@deck) %><br>
+<%= link_to 'Add/Remove Cards from this Deck', add_remove_cards_path(@deck) %><br>
 <%= link_to 'Delete this Deck',
     deck_path(@deck),
     method: :delete,

@@ -1,0 +1,15 @@
+<div class='page_title'>
+  <h1>Add/Remove Cards from this Deck</h1>
+</div>
+
+<p>
+  Deck being modified:
+  <%= @deck.description %>
+</p>
+
+<%= form_for @deck do |f| %>
+  <%= f.collection_check_boxes :card_ids, Card.all, :id, :front %>
+  <%= f.submit 'Save Changes' %>
+<% end %>
+
+<%= link_to 'Cancel', deck_path(@deck) %>
