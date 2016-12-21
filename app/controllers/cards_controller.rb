@@ -16,6 +16,10 @@ class CardsController < ApplicationController
     @card = Card.find(params[:id])
   end
 
+  def add_to_decks
+    @card = Card.find(params[:id])
+  end
+
   def update
     @card = Card.find(params[:id])
     if @card.update(card_params)
@@ -42,6 +46,6 @@ class CardsController < ApplicationController
 
   private
     def card_params
-      params.require(:card).permit(:front, :back)
+      params.require(:card).permit(:front, :back, deck_ids: [])
     end
 end

@@ -42,6 +42,6 @@ class DecksController < ApplicationController
 
   private
     def deck_params
-      params.require(:deck).permit(:description)
+      params.require(:deck).permit(:description, card_ids: [])
     end
 end

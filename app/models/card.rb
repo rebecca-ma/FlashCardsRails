@@ -1,6 +1,5 @@
 class Card < ApplicationRecord
-  has_many :members
-  has_many :decks, through: :members
+  has_and_belongs_to_many :decks
   validates :front, :presence => true
   validates :back, :presence => true
 end

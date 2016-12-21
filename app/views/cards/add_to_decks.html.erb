@@ -1,0 +1,21 @@
+<div class='page_title'>
+  <h1>Add to Decks</h1>
+</div>
+
+<div id='card_info'>
+  <p>
+    Front:<br>
+    <%= @card.front %>
+  </p>
+  <p>
+    Back:<br>
+    <%= @card.back %>
+  </p>
+</div>
+
+<div class='add_to_choices'>
+  <%= form_for @card do |f| %>
+    <%= f.collection_check_boxes :deck_ids, Deck.all, :id, :description %>
+    <%= f.submit 'Save' %>
+  <% end %>
+</div>

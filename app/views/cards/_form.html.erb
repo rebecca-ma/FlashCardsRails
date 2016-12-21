@@ -2,11 +2,11 @@
   <%= form_for @card do |f| %>
     <p>
       Front:
-      <%= f.text_area :front, value: curr_front %>
+      <%= f.text_area :front %>
     </p>
     <p>
       Back:
-      <%= f.text_area :back, value: curr_back %>
+      <%= f.text_area :back %>
     </p>
     <p>
       <%= f.submit submit_msg %>
