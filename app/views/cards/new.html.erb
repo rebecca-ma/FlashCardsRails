@@ -1,0 +1,10 @@
+<div class='page_title'>
+  <h1>Make a New Card</h1>
+</div>
+
+<%= render 'form',
+           curr_front: '',
+           curr_back: '',
+           submit_msg: 'Create Card!' %>
+
+<%= link_to 'Cancel', cards_path %>

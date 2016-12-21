@@ -1,0 +1,11 @@
+<div class='form_container'>
+  <%= form_for @deck do |f| %>
+    <p>
+      Deck Description:<br>
+      <%= f.text_field :description, value: curr_description %>
+    </p>
+    <p>
+      <%= f.submit submit_msg %>
+    </p>
+  <% end %>
+</div>

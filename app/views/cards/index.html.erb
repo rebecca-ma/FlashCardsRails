@@ -1,0 +1,21 @@
+<div class='page_title'>
+  <h1>List of Cards</h1>
+</div>
+
+<div id='create_card'>
+  <%= link_to 'Create a New Card', new_card_path %>
+</div>
+
+<table>
+  <tr>
+    <td>Front</td>
+    <td>Back</td>
+  </tr>
+  <% @cards.each do |card| %>
+    <tr>
+      <td><%= card.front %></td>
+      <td><%= card.back %></td>
+      <td><%= link_to 'View', card_path(card) %></td>
+    </tr>
+  <% end %>
+</table>

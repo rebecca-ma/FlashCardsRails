@@ -1,0 +1,14 @@
+<div class='page_title'>
+  <h1>Deck List</h1>
+</div>
+
+<%= link_to 'Make a new deck', new_deck_path %>
+
+<table>
+  <% @decks.each do |deck| %>
+    <tr>
+      <td><%= deck.description %></td>
+      <td><%= link_to 'View Deck', deck_path(deck) %></td>
+    </tr>
+  <% end %>
+</table>

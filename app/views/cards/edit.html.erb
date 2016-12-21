@@ -1,0 +1,10 @@
+<div class='page_title'>
+  <h1>Edit this Card</h1>
+</div>
+
+<%= render 'form',
+           curr_front: @card.front,
+           curr_back: @card.back,
+           submit_msg: 'Save Changes' %>
+
+<%= link_to 'Cancel', card_path(@card) %>

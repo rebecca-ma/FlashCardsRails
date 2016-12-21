@@ -1,0 +1,9 @@
+<div class='page_title'>
+  <h1>Edit Deck Description</h1>
+</div>
+
+<%= render 'form',
+    curr_description: @deck.description,
+    submit_msg: 'Save' %>
+
+<%= link_to 'Cancel', deck_path(@deck) %>

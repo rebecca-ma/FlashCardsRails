@@ -1,0 +1,15 @@
+<div class='form_container'>
+  <%= form_for @card do |f| %>
+    <p>
+      Front:
+      <%= f.text_area :front, value: curr_front %>
+    </p>
+    <p>
+      Back:
+      <%= f.text_area :back, value: curr_back %>
+    </p>
+    <p>
+      <%= f.submit submit_msg %>
+    </p>
+  <% end %>
+</div>
