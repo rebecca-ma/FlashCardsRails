@@ -36,7 +36,11 @@ class DecksController < ApplicationController
   def show
     @deck = Deck.find(params[:id])
   end
-  
+
+  def study
+    @deck = Deck.find(params[:id])
+  end
+
   def destroy
     @deck = Deck.find(params[:id])
     @deck.destroy

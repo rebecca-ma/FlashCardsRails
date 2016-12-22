@@ -1,0 +1,25 @@
+<script type="text/javascript">
+  window.onload = function(){
+    shuffleDeck();
+  };
+</script>
+
+<div class='page_title'>
+  <h1>Deck Study</h1>
+</div>
+
+<div class='deck_description'>
+  <p>
+    <%= @deck.description %>
+  </p>
+</div>
+
+<div class='flash_cards'>
+  <p id='card_display'>Card Display</p>
+  <div class='flash_button' onclick="displayPrev()">Previous</div>
+  <div class='flash_button' onclick="flip()">Flip</div>
+  <div class='flash_button' onclick="discplayNext()">Next</div>
+</div>
+
+<%= content_tag 'div', id: "datadiv", data: {cards: @deck.cards} do %>
+<% end %>
