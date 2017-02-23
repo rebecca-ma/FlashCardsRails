@@ -1,8 +1,9 @@
-<script type="text/javascript">
+<%= javascript_include_tag "application" %>
+<%= javascript_tag do %>
   window.onload = function(){
     shuffleDeck();
   };
-</script>
+<% end %>
 
 <div class='page_title'>
   <h1>Deck Study</h1>
@@ -15,11 +16,11 @@
 </div>
 
 <div class='flash_cards'>
-  <p id='card_display'>Card Display</p>
+  <p id='card_display'>Loading cards...</p>
   <div class='flash_button' onclick="displayPrev()">Previous</div>
   <div class='flash_button' onclick="flip()">Flip</div>
   <div class='flash_button' onclick="discplayNext()">Next</div>
 </div>
 
-<%= content_tag 'div', id: "datadiv", data: {cards: @deck.cards} do %>
+<%= content_tag 'div', id: "datadiv", data: {cards: @cards} do %>
 <% end %>

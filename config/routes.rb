@@ -8,5 +8,9 @@ Rails.application.routes.draw do
   get '/decks/add_remove_cards/:id',
       to: 'decks#add_remove_cards',
       as: 'add_remove_cards'
+  get '/decks/study/:id',
+      to: 'decks#study',
+      as: 'study_deck'
+
   root 'welcome#index'
 end

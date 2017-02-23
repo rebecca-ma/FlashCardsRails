@@ -39,6 +39,7 @@ class DecksController < ApplicationController
 
   def study
     @deck = Deck.find(params[:id])
+    @cards = @deck.cards
   end
 
   def destroy

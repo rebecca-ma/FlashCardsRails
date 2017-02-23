@@ -34,7 +34,7 @@ class CardsController < ApplicationController
   end
 
   def index
-    @cards = Card.all
+    @cards = Card.all_by_alphabetical_front
   end
 
   def destroy
